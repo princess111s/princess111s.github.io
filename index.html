@@ -303,8 +303,7 @@
             <div class="gift-bottom"><div class="bottom-stripe"></div></div>
             
             <div class="photo-reveal-container">
-                <!-- დაემატა onerror ალტერნატიული ფორმატების მოსაძებნად -->
-                <img id="reveal-img" src="saba1.jpg" alt="Saba" onerror="fixImage(this, 'saba1')">
+                <img src="saba1.jpg" alt="Saba">
             </div>
 
             <div class="main-title">SABA'S SPACE</div>
@@ -321,37 +320,20 @@
         </div>
 
         <div class="grid-gallery">
-            <div class="card-box"><img src="saba1.jpg" alt="Saba 1" onerror="fixImage(this, 'saba1')"></div>
-            <div class="card-box"><img src="saba2.jpg" alt="Saba 2" onerror="fixImage(this, 'saba2')"></div>
-            <div class="card-box"><img src="saba3.jpg" alt="Saba 3" onerror="fixImage(this, 'saba3')"></div>
-            <div class="card-box"><img src="saba4.jpg" alt="Saba 4" onerror="fixImage(this, 'saba4')"></div>
+            <div class="card-box"><img src="saba1.jpg" alt="Saba 1"></div>
+            <div class="card-box"><img src="saba2.jpg" alt="Saba 2"></div>
+            <div class="card-box"><img src="saba3.jpg" alt="Saba 3"></div>
+            <div class="card-box"><img src="saba4.jpg" alt="Saba 4"></div>
         </div>
 
         <div class="final-card">
-            <p>კეთილი იყოს თქვენი მობრძანება 🦇  .</p>
+            <p>კეთილი იყოს თქვენი მობრძანება ციფრულ სივრცეში.</p>
             <p>აქ განთავსებულია საუკეთესო მომენტების კრებული.</p>
             <div class="signature">SABA © 2026</div>
         </div>
     </div>
 
     <script>
-        // სკრიპტი, რომელიც ავტომატურად ასწორებს ფოტოების გაფართოებებს და ასოებს, თუ საიტმა ვერ იპოვა
-        const formats = ['.JPG', '.png', '.PNG', '.jpeg', '.JPEG', '.jfif'];
-        function fixImage(img, baseName) {
-            // ვამოწმებთ რომელი ცდაა
-            if (!img.dataset.tryIndex) img.dataset.tryIndex = 0;
-            let index = parseInt(img.dataset.tryIndex);
-            
-            if (index < formats.length) {
-                img.src = baseName + formats[index];
-                img.dataset.tryIndex = index + 1;
-            } else {
-                // თუ საერთოდ ვერაფერი იპოვა, ჩაისმება ლამაზი პლაცებო ფონი, რომ საიტი არ დამახინჯდეს
-                img.src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500";
-                img.onerror = null; 
-            }
-        }
-
         function openPresent() {
             const box = document.getElementById('clickBox');
             const scrollTag = document.getElementById('scrollTag');
